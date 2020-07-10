@@ -38,6 +38,7 @@ class _MyAppState extends State<MyApp> {
         'answers': ['穏やか', '激しい', '冷静', '情緒不安定'],
       },
     ];
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
