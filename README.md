@@ -1,17 +1,12 @@
 # quizapp
+選択肢によって答えが変わるアプリ
 
-A new Flutter project.
+## 仕組み
+# answer.dart >> 答えの選択肢を管理
+# question.dart >> 質問のレイアウト部分を管理
+# quiz.dart >> main.dartでの選択肢から受け取った値に沿って、表示を変える部分の仕組みを管理
+# result.dart >> 結果部分の情報を保持
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# quizapp_flutter
+## まだよくわからないこと
+Widgetのわけ方。（ページごとにわければ良い気がするけど、それじゃだめなん？）
+なんでquiz.dartとquestion.dartをわけているのか？
