@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
-  Result(this.resultScore);
+  final Function resetHandler;
+  Result(this.resultScore, this.resetHandler);
   String get resultPhrase {
     var resultText;
     if (resultScore <= 8) {
@@ -38,10 +39,20 @@ class Result extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(5),
       width: double.infinity,
-      child: Text(
-        resultPhrase,
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-      ),
+      child: Column(children: <Widget>[
+        Text(
+          resultPhrase,
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+        FlatButton(
+          child: Text(
+            '最初から診断する',
+          ),
+          textColor: Colors.blue,
+          onPressed: resetHandler,
+        )
+      ]),
     );
   }
 }
